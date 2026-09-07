@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrapper"
+version = "0.1.0"
+description = "Instagram Viral Content Scraper & AI Analyzer"
+readme = "config/spec.md"
+requires-python = ">=3.10"
+dependencies = [
+    "instaloader>=4.10.0",
+    "faster-whisper>=1.0.0",
+    "google-genai>=0.1.1",
+    "sqlalchemy>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "pandas>=2.0.0",
+    "yt-dlp>=2024.0.0",
+    "requests>=2.31.0",
+    "rich>=13.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
