@@ -56,3 +56,9 @@ data/audio/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Instagram Session and Cookie files
+data/sessions/
+*cookies*.json
+session-*
+*.session
